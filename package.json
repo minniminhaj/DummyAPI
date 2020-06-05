@@ -1,0 +1,23 @@
+{
+  "name": "dummy-api",
+  "version": "1.0.0",
+  "description": "An API for Dummy Generator google extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Minni Minhaj",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0",
+    "slugify": "^1.4.0",
+    "unsplash-js": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
