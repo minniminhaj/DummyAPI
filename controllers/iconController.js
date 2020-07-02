@@ -11,10 +11,7 @@ const authGetHeader = {
   },
 };
 exports.getInitIcon = catchAsync(async (req, res, next) => {
-  await fetch(
-    `https://api.flaticon.com/v2/app/authentication`,
-    authPostIconHeader
-  )
+  await fetch(`https://api.flaticon.com/v2/app/authentication`, authGetHeader)
     .then((res) => res.json())
     .then((json) => {
       console.log(json);
