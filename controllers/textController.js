@@ -14,7 +14,6 @@ exports.getInitDummyText = catchAsync(async (req, res, next) => {
 
 exports.getSpecificDummyParas = catchAsync(async (req, res, next) => {
   const paraNumber = parseInt(req.params.para) + 1;
-  console.log(paraNumber);
   if (paraNumber > 151) {
     return next(new AppError("Please enter the paragraph within limit of 150"));
   }
