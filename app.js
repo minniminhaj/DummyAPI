@@ -17,10 +17,6 @@ app.use(cors());
 
 app.options("*", cors());
 
-app.use((req, res, next) => {
-  req.requestTime = new Date().toISOString();
-  next();
-});
 app.get("/", function (req, res, next) {
   res.status(200).json({
     result: "Success",
