@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const imageRouter = require("./routes/imageRouter");
-const textRouter = require("./routes/textRouter");
 const gifRouter = require("./routes/gifRouter");
 const iconRouter = require("./routes/iconRouter");
 const globalErrorHandler = require("./controllers/errorController");
