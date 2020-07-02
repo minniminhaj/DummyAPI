@@ -2,7 +2,7 @@
   "name": "dummy-api",
   "version": "1.0.0",
   "description": "An API for Dummy Generator google extension",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
