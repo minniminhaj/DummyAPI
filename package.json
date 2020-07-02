@@ -4,7 +4,7 @@
   "description": "An API for Dummy Generator google extension",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "author": "Minni Minhaj",
   "license": "ISC",
