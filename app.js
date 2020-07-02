@@ -6,7 +6,16 @@ const gifRouter = require("./routes/gifRouter");
 const iconRouter = require("./routes/iconRouter");
 const globalErrorHandler = require("./controllers/errorController");
 const AppError = require("./utils/appError");
+const cors = require("cors");
 app.use(express.json());
+
+app.use(cors());
+// Access-Control-Allow-Origin *
+// app.use(cors({
+//   origin: 'https://www.welt.com'
+// }))
+
+app.options("*", cors());
 
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
@@ -31,7 +40,5 @@ app.all("*", (req, res, next) => {
 });
 
 app.use(globalErrorHandler);
-app.listen("4000", () => {
-  console.log("The app is running");
-});
+
 module.exports = app;
