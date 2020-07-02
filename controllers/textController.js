@@ -2,7 +2,7 @@ const catchAsync = require("./../utils/catchAsync");
 const AppError = require("./../utils/appError");
 const fs = require("fs");
 
-const data = fs.readFileSync(`${__dirname}/dummy-data/dummyText.json`, "utf-8");
+const data = fs.readFileSync(`dummyText.json`, "utf-8");
 const dataObj = JSON.parse(data);
 const initText = dataObj.paras.slice(1, 11);
 exports.getInitDummyText = catchAsync(async (req, res, next) => {
