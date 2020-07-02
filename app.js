@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const imageRouter = require("./routes/imageRouter");
+const textRouter = require("./routes/textRouter");
 const gifRouter = require("./routes/gifRouter");
 const iconRouter = require("./routes/iconRouter");
 const globalErrorHandler = require("./controllers/errorController");
@@ -12,7 +13,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use("/api/v1/image", imageRouter);
-//app.use("/api/v1/text", textRouter);
+app.use("/api/v1/text", textRouter);
 app.use("/api/v1/gif", gifRouter);
 app.use("/api/v1/icon", iconRouter);
 
