@@ -2,9 +2,9 @@
   "name": "dummy-api",
   "version": "1.0.0",
   "description": "An API for Dummy Generator google extension",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "Minni Minhaj",
   "license": "ISC",
