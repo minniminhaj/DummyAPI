@@ -13,7 +13,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use("/api/v1/image", imageRouter);
-app.use("/api/v1/text", textRouter);
+//app.use("/api/v1/text", textRouter);
 app.use("/api/v1/gif", gifRouter);
 app.use("/api/v1/icon", iconRouter);
 
