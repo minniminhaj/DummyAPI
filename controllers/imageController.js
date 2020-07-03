@@ -11,7 +11,7 @@ const authUnsplashgetHeader = {
 };
 exports.getInitPhotos = catchAsync(async (req, res, next) => {
   await fetch("https://api.unsplash.com/photos/", authUnsplashgetHeader)
-    .then((res) => res.json())
+    .then((result) => result.json())
     .then((json) =>
       res.status(200).json({
         status: "success",
@@ -28,12 +28,11 @@ exports.getInitPhotos = catchAsync(async (req, res, next) => {
 
 exports.getSpecificPhotos = catchAsync(async (req, res, next) => {
   const querySearch = req.params.query;
-
   await fetch(
     `https://api.unsplash.com/search/collections?query=${querySearch}`,
     authUnsplashgetHeader
   )
-    .then((res) => res.json())
+    .then((result) => result.json())
     .then((json) =>
       res.status(200).json({
         status: "success",
