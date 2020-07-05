@@ -9,7 +9,6 @@ exports.getInitGif = catchAsync(async (req, res, next) => {
   )
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       res.status(200).json({
         status: "success",
         length: json.results.length,
@@ -26,7 +25,6 @@ exports.getSpecificGif = catchAsync(async (req, res, next) => {
   )
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       res.status(200).json({
         status: "success",
         length: json.results.length,

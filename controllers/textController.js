@@ -6,9 +6,7 @@ const data = fs.readFileSync(`dummyText.json`, "utf-8");
 const dataObj = JSON.parse(data);
 const initText = dataObj.paras.slice(1, 11);
 exports.getInitDummyText = catchAsync(async (req, res, next) => {
-  res.status(200).json({
-    data: initText,
-  });
+  res.status(200).send(initText);
   next();
 });
 
@@ -18,10 +16,6 @@ exports.getSpecificDummyParas = catchAsync(async (req, res, next) => {
     return next(new AppError("Please enter the paragraph within limit of 150"));
   }
   const paras = dataObj.paras.slice(1, paraNumber);
-  res.status(200).json({
-    status: "success",
-    length: paras.length,
-    data: paras,
-  });
+  res.status(200).send(paras);
   next();
 });

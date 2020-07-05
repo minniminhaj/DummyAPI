@@ -29,7 +29,7 @@ exports.getInitPhotos = catchAsync(async (req, res, next) => {
 exports.getSpecificPhotos = catchAsync(async (req, res, next) => {
   const querySearch = req.params.query;
   await fetch(
-    `https://api.unsplash.com/search/collections?query=${querySearch}`,
+    `https://api.unsplash.com/search/photos?query=${querySearch}`,
     authUnsplashgetHeader
   )
     .then((result) => result.json())

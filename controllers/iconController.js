@@ -18,7 +18,6 @@ exports.getInitIcon = catchAsync(async (req, res, next) => {
   )
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       res.status(200).json({
         status: "success",
         data: json,
@@ -35,7 +34,7 @@ exports.authFlatIcon = catchAsync(async (req, res, next) => {
       Accept: "application/json",
     },
   })
-    .then((res) => console.log(JSON.stringify(res)))
+    .then((res) => console.log("GIFs Loaded"))
     .then((json) => {
       res.status(200).json({
         status: "success",
@@ -52,7 +51,6 @@ exports.getSpecificIcon = catchAsync(async (req, res, next) => {
   )
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       res.status(200).json({
         status: "success",
         length: json.results.length,
